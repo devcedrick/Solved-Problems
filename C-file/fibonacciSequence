@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main (void)
+{
+    int fibonacciSeq[10];
+
+    fibonacciSeq[0] = 1;
+    fibonacciSeq[1] = 2;
+
+    for (int i=2; i<=9; i++)
+    {
+        fibonacciSeq[i] = fibonacciSeq[i-2] + fibonacciSeq[i-1];
+    }
+
+    int overAll = 0;
+    for (int i=0; i<10; i++)
+    {
+        overAll += fibonacciSeq[i];
+    }
+
+    printf("Fibonacci Sequence: ");
+    for(int i=0; i<10; i++)
+    {
+        printf(" %d", fibonacciSeq[i]);
+    }
+    printf("\nSum: %d", overAll);
+
+    return 0;
+}
